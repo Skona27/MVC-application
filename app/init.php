@@ -23,7 +23,7 @@ $GLOBALS['config'] = array(
 		'token_name' => 'token'
 	),
 	'stats' => array(
-		'cookie_expiry' => 7 * 86400
+		'cookie_expiry' => 14 * 86400
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
