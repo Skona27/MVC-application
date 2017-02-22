@@ -1,0 +1,28 @@
+body {
+  padding-top: 70px;
+}
+
+#footer {
+	padding: 20px;
+	border: 2px solid black;
+	background-color: #222;
+	color: #eee;
+	margin-top: 50px;
+}
+
+.main-content {
+	min-height: 750px;
+}
+
+.navbar {
+	background-color: #222;
+	border: 2px solid black;
+}
+
+.navbar-nav > li > a {
+	color: #eee !important;
+}
+
+.navbar-brand {
+	color: #bcbcbc !important;
+}
