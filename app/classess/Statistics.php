@@ -57,7 +57,9 @@ class Statistics {
 			'all_visits' 	=> $all_visits,
 			'all_visitors'	=> $all_visitors,
 			'all_unique' 	=> $all_unique,
-			'per_user' 		=> $per_user
+			'per_user' 		=> $per_user,
+			'returning' 	=> $returning,
+			'new' 			=> $new
 		);
 	}
 

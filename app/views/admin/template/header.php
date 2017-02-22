@@ -6,7 +6,10 @@
     <title>MVC - Administrator panel</title>
 	<!-- Bootstrap Styles-->
     <link rel="stylesheet" href="<?=Config::get('path/public')?>/css/bootstrap.css">
+    <!-- Admin Styles-->
     <link rel="stylesheet" href="<?=Config::get('path/public')?>/css/admin.css">
+    <!-- Morris-->
+    <link rel="stylesheet" href="<?=Config::get('path/public')?>/css/morris.css">
      <!-- FontAwesome Styles-->
     <link href="<?=Config::get('path/public')?>/css/font-awesome.css" rel="stylesheet" />
      <!-- Google Fonts-->
