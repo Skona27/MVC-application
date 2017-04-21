@@ -11,8 +11,8 @@ $GLOBALS['config'] = array(
 		'db' 		=>	'test'
 	),
 	'path' => array(
-		'public' 	=>	'http://localhost/mvc/public', //adres strony www.example.com
-		'uploads' =>	'http://localhost/mvc/public/uploads/'
+		'public' 	=>	'http://192.168.1.14/MVC-application/public', //adres strony www.example.com
+		'uploads' =>	'http://192.168.1.14/MVC-application/public/uploads/'
 	),
 	'dir' => array(
 		'public' => $_SERVER['DOCUMENT_ROOT'] . '/mvc/public/',
