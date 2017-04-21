@@ -29,17 +29,17 @@ class File {
 						if(move_uploaded_file($file_tmp, $file_destination)) {
 							File::$uploaded[$position] = $file_destination;
 						}	else {
-							File::$_failed[$position] = "[{$file_name}] failed to upload!";
+							File::$_failed[$position] = "[{$file_name}] nie został wrzucony!";
 						}
 
 					}	else {
-						File::$_failed[$position] = "[{$file_name}] is too large!";
+						File::$_failed[$position] = "[{$file_name}] jest za duży!";
 					}
 				}	else {
-					File::$_failed[$position] = "[{$file_name}] errored with code {$file_error}!";
+					File::$_failed[$position] = "[{$file_name}] zakomunikował błąd nr {$file_error}!";
 				}
 			}	else {
-				File::$_failed[$position] = "[{$file_name}] file extension '{$file_ext}' is not allowed!";
+				File::$_failed[$position] = "[{$file_name}] ma rozszerzenie '{$file_ext}' które nie jest obsługiwane!";
 			}
 		}
 	}

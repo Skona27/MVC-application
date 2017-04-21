@@ -5,8 +5,8 @@ class User_model extends Model {
 	private $_user;
 
 	public function __construct() {
+		parent::__construct();
 		$this->_user = new User();
-		$this->_db = Database::getInstance();
 	}
 
 	public function user() {

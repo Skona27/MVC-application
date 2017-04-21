@@ -23,28 +23,28 @@ class Validate {
 					switch($rule) {
 						case 'min':
 							if(strlen($value) < $rule_value) {
-								$this->addError("{$item} must be a minimum of {$rule_value} characters!");
+								$this->addError("{$item} musi mieć przynajmniej {$rule_value} znaków!");
 							}	break;
 
 						case 'max':
 							if (strlen($value) > $rule_value) {
-								$this->addError("{$item} must be a maximum of {$rule_value} characters!");
+								$this->addError("{$item} musi mieć maksymalnie {$rule_value} znaków!");
 							}	break;
 
 						case 'matches':
 							if ($value != $source[$rule_value]) {
-								$this->addError("{$rule_value} must match {$item}!");
+								$this->addError("{$rule_value} musi pasować do {$item}!");
 							}	break;
 
 						case 'unique':
 							$check = $this->_db->search($rule_value, array($item, '=', $value));
 							if ($check->count()) {
-								$this->addError("{$item} already exists!");
+								$this->addError("{$item} już istnieje!");
 							}	break;
 
 						case 'email':
 							if(!filter_var($value, FILTER_SANITIZE_EMAIL)) {
-								$this->addError("$item} is not a valid email!");
+								$this->addError("$item} nie jest poprawnym adresem email!");
 							}	break;
 					}
 				}
