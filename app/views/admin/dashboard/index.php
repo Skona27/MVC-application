@@ -5,7 +5,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<i class="fa fa-line-chart fa-fw"></i>
-						14 days recap
+						W przeciągu 14 dni
 					</div>
 					<div class="panel-body">
 						<div id="morris-line-chart"></div>
@@ -20,7 +20,7 @@
         		<div class="panel panel-default">
 					<div class="panel-heading">
 						<i class="fa fa-comment fa-fw"></i>
-						Last 14 days
+						Ostatnie 14 dni
 					</div>
 					<div class="panel-body">
 						<div class="row">
@@ -33,7 +33,7 @@
 		                            </div>
 		                            <div class="panel-right">
 										<h3><?=$data['sum_stats']['all_visits']?></h3>
-		                               <strong> Views</strong>
+		                               <strong> Odsłon</strong>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -46,7 +46,7 @@
 		                            </div>
 		                            <div class="panel-right">
 										<h3><?=$data['sum_stats']['all_visitors']?></h3>
-		                               <strong> Visitors</strong>
+		                               <strong> Odwiedzających</strong>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -62,7 +62,7 @@
 		                            </div>
 		                            <div class="panel-right">
 										<h3><?=$data['sum_stats']['per_user']?></h3>
-		                               <strong> Clicks per visitor</strong>
+		                               <strong> Odsłon na odwiedzającego</strong>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -75,7 +75,7 @@
 		                            </div>
 		                            <div class="panel-right">
 										<h3><?=$data['sum_stats']['all_unique']?></h3>
-		                               <strong> Unique visitors</strong>
+		                               <strong> Unikalnych odwiedzających</strong>
 		                            </div>
 		                        </div>
 		                    </div>
@@ -88,7 +88,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                     	<i class="fa fa-pie-chart fa-fw"></i>
-                        Percentage of new and returning visitors
+                        Stosunek nowych i porwacających użytkowników
                     </div>
                     <div class="panel-body">
                         <div id="morris-donut-chart"></div>

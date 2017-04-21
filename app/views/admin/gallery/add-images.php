@@ -1,7 +1,7 @@
 <div class="panel panel-default">
 
 	<div class="panel-heading">
-    	Upload your imagaes
+    	Dodaj swoje zdjęcia
     </div>
 
 	<div class="panel-body">
@@ -11,7 +11,7 @@
 			</div>
 
 			<input type="hidden" name="token" value="<?=Token::generate()?>">
-			<input type="submit" class="btn btn-primary btn-lg" value="Upload">
+			<input type="submit" class="btn btn-primary btn-lg" value="Wyślij">
 		</form>
 	</div>
 

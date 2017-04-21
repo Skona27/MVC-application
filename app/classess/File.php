@@ -50,8 +50,8 @@ class File {
 		}
 
 		if(count(File::$uploaded) == 1) {
-			$msg = ' file was uploaded!';
-		}	else $msg = ' files were uploaded!';
+			$msg = ' plik został wrzucony!';
+		}	else $msg = ' plików zostało wrzuconych!';
 		return count(File::$uploaded) . $msg;
 	}
 

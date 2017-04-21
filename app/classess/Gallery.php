@@ -8,8 +8,8 @@ class Gallery  {
 			$_deletedItems;
 
 	public function __construct() {
-		$this->_path = Config::get('path/uploads');
-		$this->_dir = Config::get('dir/uploads');
+		$this->_path = Config::get('path/gallery');
+		$this->_dir = Config::get('dir/gallery');
 		$this->_extensions = Config::get('file/image_ext');
 	}
 
@@ -19,8 +19,8 @@ class Gallery  {
 
 	public function deletedImages() {
 		if($this->_deletedItems == 1) {
-			$msg = ' image was deleted!';
-		}	else $msg = ' images were deleted!';
+			$msg = ' obraz został usunięty!';
+		}	else $msg = ' obrazy zostały usunięte!';
 		return $this->_deletedItems . $msg;
 	}
 

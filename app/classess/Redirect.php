@@ -15,7 +15,7 @@ class Redirect {
 						break;
 				}
 			}	else {
-				header('Location: ' . Config::get('path/public') . '/' . $location);
+				header('Location: ' . Config::get('path/public') . $location);
 				exit();
 			}
 		}

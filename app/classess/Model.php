@@ -4,7 +4,7 @@ class Model {
 
 	protected $_db;
 	
-	protected function __construct() {
+	public function __construct() {
 		$this->_db = Database::getInstance();
 	}
 }

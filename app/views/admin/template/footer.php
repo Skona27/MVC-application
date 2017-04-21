@@ -1,8 +1,8 @@
             </div>
           </div>
 				 <footer>
-          <span>&copy; <?=date("Y")?> MVC &middot; All rights reserved.</span>
-          <span class="pull-right">Version: <?=Config::get('version')?></span>
+          <span>&copy; <?=date("Y")?> IKSEL Studio Reklamy &middot; Wszelkie prawa zastrzeżone.</span>
+          <span class="pull-right">Wersja: <?=Config::get('version')?></span>
          </footer>
 				</div>
              <!-- /. PAGE INNER  -->
@@ -12,17 +12,25 @@
      <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
-    <script src="<?=Config::get('path/public')?>/js/jquery-1.11.1.min.js"></script>
+    <script src="<?=Config::get('path/public')?>js/jquery-1.11.1.min.js"></script>
       <!-- Bootstrap Js -->
-    <script src="<?=Config::get('path/public')?>/js/bootstrap.min.js"></script>
+    <script src="<?=Config::get('path/public')?>js/bootstrap.min.js"></script>
     <!-- Metis Menu Js -->
-    <script src="<?=Config::get('path/public')?>/js/jquery.metisMenu.js"></script>
+    <script src="<?=Config::get('path/public')?>js/jquery.metisMenu.js"></script>
       <!-- Custom Js -->
-    <script src="<?=Config::get('path/public')?>/js/custom-scripts.js"></script>
-    <script src="<?=Config::get('path/public')?>/js/morris.js"></script>
-    <script src="<?=Config::get('path/public')?>/js/raphael.js"></script>
-    
-    <?php
+    <script src="<?=Config::get('path/public')?>js/custom-scripts.js"></script>
+    <script src="<?=Config::get('path/public')?>js/morris.js"></script>
+    <script src="<?=Config::get('path/public')?>js/raphael.js"></script>
+
+      <?php 
+      if(isset($data['js'])) {
+        foreach($data['js'] as $js) {
+          echo '<script src="' . Config::get('path/public') . 'js/' . $js . '"></script>';
+        }
+      }
+      ?>
+
+  <?php
       if($data['active'] === 'dashboard'):
     ?>
       <script>
@@ -31,10 +39,10 @@
                   Morris.Donut({
                       element: 'morris-donut-chart',
                       data: [{
-                          label: "Returning",
+                          label: "Powracający",
                           value: <?=$data['sum_stats']['returning']?>
                       }, {
-                          label: "New",
+                          label: "Nowi",
                           value: <?=$data['sum_stats']['new']?>
                       }],
                          colors: [
@@ -57,7 +65,7 @@
                      
           xkey: 'year',
           ykeys: ['a', 'b'],
-          labels: ['Visitors', 'Unique visitors'],
+          labels: ['Użytkownicy', 'Unikalni użytkownicy'],
           fillOpacity: 0.6,
           lineWidth: 4,
           hideHover: 'auto',

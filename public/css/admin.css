@@ -115,7 +115,8 @@ border-radius: 0;
   color: #1F1F1F;
 }
 .text-muted {
-  color: #FB5651;
+  font-size: 13px;
+  margin-top: -15px;
 }
 .badge {
   display: inline-block;

@@ -11,12 +11,17 @@ $GLOBALS['config'] = array(
 		'db' 		=>	'test'
 	),
 	'path' => array(
-		'public' 	=>	'http://192.168.1.14/MVC-application/public', //adres strony www.example.com
-		'uploads' =>	'http://192.168.1.14/MVC-application/public/uploads/'
+		'public' 	=>	'http://192.168.1.14/MVC-application/public/',
+		'uploads' =>	'http://192.168.1.14/MVC-application/public/uploads/',
+		'gallery' =>	'http://192.168.1.14/MVC-application/public/uploads/gallery/',
 	),
 	'dir' => array(
-		'public' => $_SERVER['DOCUMENT_ROOT'] . '/mvc/public/',
-		'uploads' => $_SERVER['DOCUMENT_ROOT'] . '/mvc/public/uploads/'
+		'public' => $_SERVER['DOCUMENT_ROOT'] . '/MVC-application/public/',
+		'uploads' => $_SERVER['DOCUMENT_ROOT'] . '/MVC-application/public/uploads/',
+		'gallery' => $_SERVER['DOCUMENT_ROOT'] . '/MVC-application/public/uploads/gallery/',
+	),
+	'modules' => array(
+		'gallery' => 1,
 	),
 	'session' => array(
 		'session_name' => 'user',
@@ -48,5 +53,3 @@ if(Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Confi
 		$user->login();
 	}
 }
-
-//zapisać w configu wszystkie nazwy tabel, folderow i sciezki

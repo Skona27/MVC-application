@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="robots" content="none">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -27,24 +28,24 @@
       <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
-              <h1 class="text-center">Administrator panel</h1>
+              <h1 class="text-center">Panel administratora</h1>
           </div>
           <div class="modal-body">
               <form class="form col-md-12 center-block" action="" method="post">
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Username" name="Username" autocomplete="off" required autofocus>
+                  <input type="text" class="form-control input-lg" placeholder="Login" name="Username" autocomplete="off" required autofocus>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control input-lg" placeholder="Password" name="Password" autocomplete="off" required>
+                  <input type="password" class="form-control input-lg" placeholder="Hasło" name="Password" autocomplete="off" required>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="remember" id="remember"> Remember me
+                    <input type="checkbox" name="remember" id="remember"> Zapamietaj mnie
                   </label>
                 </div>
                 <div class="form-group">
                   <input type="hidden" name="token" value="<?=Token::generate()?>">
-                  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Sign in">
+                  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Zaloguj się">
                 </div>
               </form>
           </div>
@@ -55,7 +56,7 @@
             <?php
             if (Session::exists('danger')) {
               echo '<div class="alert alert-danger">';
-                echo  '<strong>Warning! </strong>' . Session::flash('danger');
+                echo  '<strong>Ostrzeżenie! </strong>' . Session::flash('danger');
               echo  '</div>';
             }
             ?>
